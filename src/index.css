@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #fcf9f3;
+  }
+}
+
+/* Global Grain Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1CEBge-z0XespRBxda5wrQnvwb9IEd5bAO5w2-SX0e1y7XzPyjmgVYQKTjN0By-HrKjr_O_0hZZdI31Gi5M8haRf6N8vi2jNoUmnDmBDb4GrDXOhBlzi6N6M_kmWdQrhqG5tLeD5YbPnk11AQNFOOscTyM6l9ze1qESZI2-FbfxqEofg9kyCTLfyucqqa8DspMBPUF62n20iE4GCvZfdHH8j9hSjVx-IMc-z12qvU-IePZeL6YD7TupTj6tn8p25QIxIJ3TdS28k");
+}
+
+/* Splash Page Canvas Elements */
+#tunnel-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.main-title {
+  pointer-events: none;
+  color: #FFFFFF;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  opacity: 1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.enter-btn-container {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.enter-btn-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#enter-btn {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.underline-svg {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 20px;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.underline-path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  stroke: #FFFFFF;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.animate-underline .underline-path {
+  animation: drawLine 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.nps-logo {
+  filter: grayscale(1) contrast(1.2);
+  transition: filter 1s ease, opacity 1s ease;
+}
+
+.bottom-scrim {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+  z-index: 45;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bottom-scrim.visible {
+  opacity: 1;
+}
+
+.bottom-ui-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 3rem;
+  pointer-events: none;
+}
+
+.bottom-ui-wrapper * {
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    white-space: normal;
+    line-height: 1.1;
+    text-align: center;
+  }
+}
+
+/* Gallery Styles */
+.panel-container {
+    transition: all 600ms cubic-bezier(0.16, 1, 0.3, 1)
+}
+.panel-item {
+    flex: 1;
+    transition: flex 600ms cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.panel-item:hover {
+    flex: 6;
+}
+.panel-item .photo-bg {
+    transition: opacity 400ms ease, filter 400ms ease;
+    filter: grayscale(60%) brightness(0.75) contrast(0.9);
+    opacity: 0.85;
+}
+.panel-item:hover .photo-bg {
+    opacity: 0;
+}
+.panel-item video {
+    opacity: 0;
+    transition: opacity 400ms ease;
+}
+.panel-item:hover video {
+    opacity: 1;
+}
+.panel-item .info-box {
+    opacity: 0;
+    transform: translatey(20px);
+    transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1) 100ms;
+    z-index: 10;
+}
+.panel-item:hover .info-box {
+    opacity: 1;
+    transform: translatey(0)
+}
+.sine-wave-container > div:nth-child(1)  { margin-top: 30px }
+.sine-wave-container > div:nth-child(2)  { margin-top: 65px }
+.sine-wave-container > div:nth-child(3)  { margin-top: 100px }
+.sine-wave-container > div:nth-child(4)  { margin-top: 65px }
+.sine-wave-container > div:nth-child(5)  { margin-top: 30px }
+.sine-wave-container > div:nth-child(6)  { margin-top: 0 }
+.sine-wave-container > div:nth-child(7)  { margin-top: 30px }
+.sine-wave-container > div:nth-child(8)  { margin-top: 65px }
+.sine-wave-container > div:nth-child(9)  { margin-top: 100px }
+.sine-wave-container > div:nth-child(10) { margin-top: 65px }
+
+/* Yosemite Page Elements */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotatey(180deg);
+}
+.card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.group:hover .card-inner {
+  transform: rotatey(180deg);
+}

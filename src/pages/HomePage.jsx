@@ -1,0 +1,209 @@
+import React from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+
+export default function HomePage() {
+  const navigate = useNavigate();
+
+  const handleMouseEnter = (e) => {
+    const video = e.currentTarget.querySelector('video');
+    if (video) {
+      video.play().catch(err => console.log('Autoplay prevented:', err));
+    }
+  };
+
+  const handleMouseLeave = (e) => {
+    const video = e.currentTarget.querySelector('video');
+    if (video) {
+      video.pause();
+    }
+  };
+
+  const goToPark = (id) => navigate(`/park/${id}`);
+
+  return (
+    <div className="bg-[#FFFFFF] text-[#1A1A1A] h-screen w-screen overflow-hidden font-body selection:bg-surface-container-highest opacity-0 animate-[fadeIn_1.5s_ease-out_forwards]">
+      <style>{`@keyframes fadeIn { to { opacity: 1; } }`}</style>
+
+      {/* Ancient Map Background — increased opacity for visible texture */}
+      <div
+        className="fixed inset-0 z-0 pointer-events-none opacity-[0.32] mix-blend-multiply transition-opacity duration-1000"
+        style={{
+          backgroundImage: 'url(/assets/ancient-map.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'sepia(0.3) contrast(1.2) brightness(1.0)'
+        }}
+      />
+
+      <div className="fixed inset-0 z-[100] grain-overlay" />
+
+      {/* Top Nav — logo + title only, no hamburger */}
+      <nav className="sticky top-0 z-[60] w-full bg-surface/90 backdrop-blur-md px-8 py-4 flex justify-between items-center">
+        <Link to="/home" className="flex items-center gap-4 hover:opacity-70 transition-opacity">
+          <img alt="NPS Logo" className="h-14 w-auto flex-shrink-0 drop-shadow-md" src="/assets/nps-logo-official.svg" />
+          <span className="font-label text-[10px] tracking-[0.2em] font-bold text-[#1A1A1A]">NPS ARCHIVE</span>
+        </Link>
+        <div className="absolute left-1/2 -translate-x-1/2 top-7">
+          <h1 className="font-headline text-[32px] font-normal leading-none tracking-[0.05em] uppercase text-[#1A1A1A]">
+            National Park Service
+          </h1>
+        </div>
+        {/* spacer */}
+        <div className="w-10" />
+      </nav>
+
+      {/* Main Content Canvas */}
+      <main className="h-full w-full flex flex-col justify-center items-center px-11 relative">
+        <div className="flex flex-col items-center justify-center w-full">
+          <div className="w-full max-w-[1380px] h-[600px] flex gap-3 sine-wave-container items-start panel-container">
+            
+            {/* Panel 1: Yosemite */}
+            <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(62)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Yosemite" src="/parks/Yosemite%20Photo.jpg" />
+              <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                <source src="/parks/Yosemite%20video.mp4" type="video/mp4" />
+              </video>
+              <div className="info-box absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+                <span className="font-label text-[10px] tracking-widest uppercase opacity-80">CALIFORNIA</span>
+                <h3 className="font-headline text-2xl mt-1">Yosemite</h3>
+              </div>
+            </div>
+
+            {/* Panel 2: Glacier */}
+            <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(22)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Glacier" src="/parks/Glacier%20Photo.jpg" />
+              <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                <source src="/parks/Glacier%20Video.mp4" type="video/mp4" />
+              </video>
+              <div className="info-box absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+                <span className="font-label text-[10px] tracking-widest uppercase opacity-80">MONTANA</span>
+                <h3 className="font-headline text-2xl mt-1">Glacier</h3>
+              </div>
+            </div>
+
+            {/* Panel 3: Olympic */}
+            <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(47)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Olympic" src="/parks/olympic%20national%20park.jpg" />
+              <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                <source src="/parks/Olympic%20video.mp4" type="video/mp4" />
+              </video>
+              <div className="info-box absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+                <span className="font-label text-[10px] tracking-widest uppercase opacity-80">WASHINGTON</span>
+                <h3 className="font-headline text-2xl mt-1">Olympic</h3>
+              </div>
+            </div>
+
+            {/* Panel 4: North Cascades */}
+            <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(46)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="North Cascades" src="/parks/North%20Cascades%20Photo.jpg" />
+              <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                <source src="/parks/North%20cascades%20Video.mp4" type="video/mp4" />
+              </video>
+              <div className="info-box absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+                <span className="font-label text-[10px] tracking-widest uppercase opacity-80">WASHINGTON</span>
+                <h3 className="font-headline text-2xl mt-1">North Cascades</h3>
+              </div>
+            </div>
+
+            {/* Panel 5: Denali */}
+            <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(17)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Denali" src="/parks/denali%20photo.jpg" />
+              <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                <source src="/parks/Denali%20Video.mp4" type="video/mp4" />
+              </video>
+              <div className="info-box absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+                <span className="font-label text-[10px] tracking-widest uppercase opacity-80">ALASKA</span>
+                <h3 className="font-headline text-2xl mt-1">Denali</h3>
+              </div>
+            </div>
+
+            {/* Panel 6: Zion */}
+            <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(63)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Zion" src="/parks/Zion%20Photo.jpg" />
+              <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                <source src="/parks/Zion%20Video.mp4" type="video/mp4" />
+              </video>
+              <div className="info-box absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+                <span className="font-label text-[10px] tracking-widest uppercase opacity-80">UTAH</span>
+                <h3 className="font-headline text-2xl mt-1">Zion</h3>
+              </div>
+            </div>
+
+            {/* Panel 7: Grand Teton */}
+            <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(25)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Grand Teton" src="/parks/grand%20teton%20photo.jpg" />
+              <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                <source src="/parks/Grand%20Teton%20Video.mp4" type="video/mp4" />
+              </video>
+              <div className="info-box absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+                <span className="font-label text-[10px] tracking-widest uppercase opacity-80">WYOMING</span>
+                <h3 className="font-headline text-2xl mt-1">Grand Teton</h3>
+              </div>
+            </div>
+
+            {/* Panel 8: Yellowstone */}
+            <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(61)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Yellowstone" src="/parks/Yellowstone%20photo.jpg" />
+              <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                <source src="/parks/Yellow%20stone%20video.mp4" type="video/mp4" />
+              </video>
+              <div className="info-box absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+                <span className="font-label text-[10px] tracking-widest uppercase opacity-80">WYOMING</span>
+                <h3 className="font-headline text-2xl mt-1">Yellowstone</h3>
+              </div>
+            </div>
+
+            {/* Panel 9: Great Sand Dunes */}
+            <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(27)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Great Sand Dunes" src="/parks/Great%20Sand%20Dunes%20photo.jpg" />
+              <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                <source src="/parks/great%20sand%20sunes%20video.mp4" type="video/mp4" />
+              </video>
+              <div className="info-box absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+                <span className="font-label text-[10px] tracking-widest uppercase opacity-80">COLORADO</span>
+                <h3 className="font-headline text-2xl mt-1">Great Sand Dunes</h3>
+              </div>
+            </div>
+
+            {/* Panel 10: Hawai'i Volcanoes */}
+            <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(31)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Hawai'i Volcanoes" src="/parks/Volcanos%20photo.jpg" />
+              <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                <source src="/parks/Volcanos%20video.mp4" type="video/mp4" />
+              </video>
+              <div className="info-box absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+                <span className="font-label text-[10px] tracking-widest uppercase opacity-80">HAWAI'I</span>
+                <h3 className="font-headline text-2xl mt-1">Hawai'i Volcanoes</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+
+      {/* Bottom Navigation */}
+      <nav className="fixed bottom-0 w-full z-50 flex justify-around items-center px-8 pb-6 pt-3 bg-white/92 backdrop-blur-md border-t border-black/6">
+        <Link to="/parks" className="flex flex-col items-center gap-1 text-black/50 hover:text-black transition-colors group">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" /></svg>
+          <span className="font-label text-[9px] tracking-[0.2em] uppercase">Parks</span>
+        </Link>
+        <a href="#" className="flex flex-col items-center gap-1 text-black/50 hover:text-black transition-colors">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z" /></svg>
+          <span className="font-label text-[9px] tracking-[0.2em] uppercase">Passes</span>
+        </a>
+        <a href="#" className="flex flex-col items-center gap-1 text-black/50 hover:text-black transition-colors">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
+          <span className="font-label text-[9px] tracking-[0.2em] uppercase">Reservations</span>
+        </a>
+        <a href="#" className="flex flex-col items-center gap-1 text-black/50 hover:text-black transition-colors">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" /></svg>
+          <span className="font-label text-[9px] tracking-[0.2em] uppercase">Trip Ideas</span>
+        </a>
+        <a href="#" className="flex flex-col items-center gap-1 text-black/50 hover:text-black transition-colors">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" /></svg>
+          <span className="font-label text-[9px] tracking-[0.2em] uppercase">More</span>
+        </a>
+      </nav>
+    </div>
+  );
+}
