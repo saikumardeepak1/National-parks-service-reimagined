@@ -1,16 +1,63 @@
-# React + Vite
+# National Parks Service — Reimagined
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-grade frontend portfolio project reimagining the U.S. National Park Service experience across all 63 parks. Designed and built from scratch.
 
-Currently, two official plugins are available:
+**Live site:** [saikumardeepak1.github.io/National-parks-service-reimagined](https://saikumardeepak1.github.io/National-parks-service-reimagined/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** + **Vite** — component architecture and build tooling
+- **Tailwind CSS** — design system and utility-first styling
+- **Framer Motion** — page transitions and micro-animations
+- **React Router v7** — client-side routing with session gating
+- **GitHub Actions** — CI/CD auto-deploy to GitHub Pages
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Immersive landing page with cinematic video backgrounds for 10 featured parks
+- All 63 national parks with detailed park pages — trails, wildlife, seasonal guides
+- Regional wildlife system with 36 species across 12 regions
+- America the Beautiful pass program page
+- Reservations planning page with seasonal demand visualization
+- Custom text scramble animation, park emblem system, and animated bear mascot
+
+## Design System
+
+| Token | Value |
+|---|---|
+| Background | `#fcf9f3` (warm cream) |
+| Dark surface | `#0d1a0f` (forest black) |
+| Gold accent | `#c4a46b` |
+| Headline font | Playfair Display |
+| Body font | Cormorant Garamond |
+| Label font | Inter |
+
+## Project Structure
+
+```
+src/
+  components/       # Reusable UI components
+    ui/             # Primitive components (TextScramble)
+  data/             # Park and wildlife data (parksData.js)
+  pages/            # Route-level page components
+public/
+  assets/
+    emblems/        # 63 individual park logos (PNG)
+    wildlife/       # 36 regional wildlife photos
+    parks/          # Featured park hero images
+  parks/            # Park hero photos and videos (local only)
+```
+
+## Local Development
+
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # Production build
+```
+
+## Credits
+
+Design, frontend engineering, and content curation by **Sai Kumar Deepak**.

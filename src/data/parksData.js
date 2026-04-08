@@ -1,64 +1,64 @@
 // ─── Regional Wildlife ────────────────────────────────────────────────────────
 export const regionWildlife = {
   northeast: [
-    { name: "Moose", type: "Mammal", tagline: "The Forest Giant", desc: "The largest member of the deer family, moose wade through ponds and streams with imposing grace. Often spotted at dawn in wetland areas.", image: "https://images.unsplash.com/photo-1570448862517-8dfafbcb5b9a?w=800&q=80" },
-    { name: "White-tailed Deer", type: "Mammal", tagline: "Meadow Ghost", desc: "Graceful and alert, white-tailed deer slip between forest and meadow at the edge of daylight, their white flags flashing as they bound into cover.", image: "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=80" },
-    { name: "Peregrine Falcon", type: "Raptor", tagline: "The Living Arrow", desc: "The world's fastest animal at 240+ mph in a stoop dive. A conservation triumph, now nesting on the park's granite cliffs and coastal headlands.", image: "https://images.unsplash.com/photo-1591608971362-f08b2a75731a?w=800&q=80" }
+    { name: "Moose", type: "Mammal", tagline: "The Forest Giant", desc: "The largest member of the deer family, moose wade through ponds and streams with imposing grace. Often spotted at dawn in wetland areas.", image: "/assets/wildlife/moose.avif" },
+    { name: "White-tailed Deer", type: "Mammal", tagline: "Meadow Ghost", desc: "Graceful and alert, white-tailed deer slip between forest and meadow at the edge of daylight, their white flags flashing as they bound into cover.", image: "/assets/wildlife/White-tailed%20Deer.jpg" },
+    { name: "Peregrine Falcon", type: "Raptor", tagline: "The Living Arrow", desc: "The world's fastest animal at 240+ mph in a stoop dive. A conservation triumph, now nesting on the park's granite cliffs and coastal headlands.", image: "/assets/wildlife/Peregrine%20Falcon.jpg" }
   ],
   southeast: [
-    { name: "American Alligator", type: "Reptile", tagline: "Ancient Architect", desc: "Unchanged in 37 million years, alligators are both apex predators and ecosystem engineers — their wallows create wetland habitats for dozens of species.", image: "https://images.unsplash.com/photo-1591825729269-caeb344f6df2?w=800&q=80" },
-    { name: "Roseate Spoonbill", type: "Wading Bird", tagline: "The Pink Brush", desc: "Unmistakable for brilliant flamingo-pink plumage and a distinctive spoon-shaped bill swept through shallow waters for shrimp and crustaceans.", image: "https://images.unsplash.com/photo-1612825173281-9a193378527e?w=800&q=80" },
-    { name: "Florida Panther", type: "Carnivore", tagline: "Ghost of the Glades", desc: "Fewer than 230 remain in the wild. The Florida panther silently patrols vast territories through sawgrass prairies and cypress domes.", image: "https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=800&q=80" }
+    { name: "American Alligator", type: "Reptile", tagline: "Ancient Architect", desc: "Unchanged in 37 million years, alligators are both apex predators and ecosystem engineers — their wallows create wetland habitats for dozens of species.", image: "/assets/wildlife/American%20Alligator.jpg" },
+    { name: "Roseate Spoonbill", type: "Wading Bird", tagline: "The Pink Brush", desc: "Unmistakable for brilliant flamingo-pink plumage and a distinctive spoon-shaped bill swept through shallow waters for shrimp and crustaceans.", image: "/assets/wildlife/Roseate%20Spoonbill.jpg" },
+    { name: "Florida Panther", type: "Carnivore", tagline: "Ghost of the Glades", desc: "Fewer than 230 remain in the wild. The Florida panther silently patrols vast territories through sawgrass prairies and cypress domes.", image: "/assets/wildlife/Florida%20Panther.jpg" }
   ],
   midwest: [
-    { name: "American Bison", type: "Megafauna", tagline: "The Walking Prairie", desc: "Once numbering 60 million, these icons of the Great Plains were nearly exterminated. Their return reshapes the very landscape they walk.", image: "https://images.unsplash.com/photo-1504173010664-32509107de27?w=800&q=80" },
-    { name: "Pronghorn", type: "Mammal", tagline: "Speed of the Plains", desc: "The second-fastest land animal on Earth evolved alongside now-extinct North American cheetahs. Built entirely for velocity across open grassland.", image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&q=80" },
-    { name: "Black-footed Ferret", type: "Mammal", tagline: "Prairie Phantom", desc: "One of North America's most endangered mammals, entirely dependent on prairie dog colonies for both food and burrow shelter.", image: "https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?w=800&q=80" }
+    { name: "American Bison", type: "Megafauna", tagline: "The Walking Prairie", desc: "Once numbering 60 million, these icons of the Great Plains were nearly exterminated. Their return reshapes the very landscape they walk.", image: "/assets/wildlife/American%20Bison.avif" },
+    { name: "Pronghorn", type: "Mammal", tagline: "Speed of the Plains", desc: "The second-fastest land animal on Earth evolved alongside now-extinct North American cheetahs. Built entirely for velocity across open grassland.", image: "/assets/wildlife/Pronghorn.jpg" },
+    { name: "Black-footed Ferret", type: "Mammal", tagline: "Prairie Phantom", desc: "One of North America's most endangered mammals, entirely dependent on prairie dog colonies for both food and burrow shelter.", image: "/assets/wildlife/Black-footed%20Ferret.jpg" }
   ],
   "southern-plains": [
-    { name: "Peregrine Falcon", type: "Raptor", tagline: "Canyon Hunter", desc: "Nesting on limestone canyon walls, these falcons survey hunting territory from 1,000-foot vantage points in the desert sky.", image: "https://images.unsplash.com/photo-1591608971362-f08b2a75731a?w=800&q=80" },
-    { name: "Javelina", type: "Mammal", tagline: "Desert Wanderer", desc: "Collared peccaries that roam desert scrub in tight family groups, navigating the thorny Chihuahuan landscape with remarkable social intelligence.", image: "https://images.unsplash.com/photo-1598662779094-110c2bad80b5?w=800&q=80" },
-    { name: "Greater Roadrunner", type: "Bird", tagline: "Desert Sprinter", desc: "Reaching 20 mph on foot, roadrunners prefer running to flying. They ambush lizards, snakes, and scorpions with lightning precision.", image: "https://images.unsplash.com/photo-1552727131-5fc6af8a4a75?w=800&q=80" }
+    { name: "Peregrine Falcon", type: "Raptor", tagline: "Canyon Hunter", desc: "Nesting on limestone canyon walls, these falcons survey hunting territory from 1,000-foot vantage points in the desert sky.", image: "/assets/wildlife/Peregrine%20Falcon.jpg" },
+    { name: "Javelina", type: "Mammal", tagline: "Desert Wanderer", desc: "Collared peccaries that roam desert scrub in tight family groups, navigating the thorny Chihuahuan landscape with remarkable social intelligence.", image: "/assets/wildlife/Javelina.jpg" },
+    { name: "Greater Roadrunner", type: "Bird", tagline: "Desert Sprinter", desc: "Reaching 20 mph on foot, roadrunners prefer running to flying. They ambush lizards, snakes, and scorpions with lightning precision.", image: "/assets/wildlife/Greater%20Roadrunner.jpg" }
   ],
   rockies: [
-    { name: "Elk", type: "Megafauna", tagline: "Voice of the Mountains", desc: "During the autumn rut, elk fill mountain valleys with haunting bugle calls that echo off granite walls. One of the largest deer species on Earth.", image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" },
-    { name: "Grizzly Bear", type: "Apex Predator", tagline: "Architect of Wilderness", desc: "Grizzlies reshape entire ecosystems — their digging aerates soil, their salmon-fishing fertilizes forests, their presence maintains predator-prey balance.", image: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=800&q=80" },
-    { name: "Mountain Goat", type: "Mammal", tagline: "Summit Sovereign", desc: "With hooves that function like suction cups, mountain goats navigate near-vertical terrain that no other large mammal can access.", image: "https://images.unsplash.com/photo-1562969516-27d27c7571ee?w=800&q=80" }
+    { name: "Elk", type: "Megafauna", tagline: "Voice of the Mountains", desc: "During the autumn rut, elk fill mountain valleys with haunting bugle calls that echo off granite walls. One of the largest deer species on Earth.", image: "/assets/wildlife/Elk.jpg" },
+    { name: "Grizzly Bear", type: "Apex Predator", tagline: "Architect of Wilderness", desc: "Grizzlies reshape entire ecosystems — their digging aerates soil, their salmon-fishing fertilizes forests, their presence maintains predator-prey balance.", image: "/assets/wildlife/Grizzly%20Bear.jpg" },
+    { name: "Mountain Goat", type: "Mammal", tagline: "Summit Sovereign", desc: "With hooves that function like suction cups, mountain goats navigate near-vertical terrain that no other large mammal can access.", image: "/assets/wildlife/Mountain%20Goat.jpg" }
   ],
   southwest: [
-    { name: "Desert Bighorn Sheep", type: "Mammal", tagline: "Cliff Dancer", desc: "Masters of impossibly steep terrain. Bighorn sheep navigate canyon walls that appear vertical to human eyes, using split hooves for extraordinary grip.", image: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800&q=80" },
-    { name: "California Condor", type: "Bird", tagline: "Return from the Brink", desc: "With a 9-foot wingspan and only 27 individuals left in 1987, the condor's recovery is North America's greatest conservation success story.", image: "https://images.unsplash.com/photo-1624395213043-fa2e123b2656?w=800&q=80" },
-    { name: "Gila Monster", type: "Reptile", tagline: "Venomous Relic", desc: "One of only a handful of venomous lizards on Earth. Slow-moving and ancient, the Gila Monster navigates the desert with quiet, sovereign purpose.", image: "https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=800&q=80" }
+    { name: "Desert Bighorn Sheep", type: "Mammal", tagline: "Cliff Dancer", desc: "Masters of impossibly steep terrain. Bighorn sheep navigate canyon walls that appear vertical to human eyes, using split hooves for extraordinary grip.", image: "/assets/wildlife/Desert%20Bighorn%20Sheep.jpg" },
+    { name: "California Condor", type: "Bird", tagline: "Return from the Brink", desc: "With a 9-foot wingspan and only 27 individuals left in 1987, the condor's recovery is North America's greatest conservation success story.", image: "/assets/wildlife/California%20Condor.jpg" },
+    { name: "Gila Monster", type: "Reptile", tagline: "Venomous Relic", desc: "One of only a handful of venomous lizards on Earth. Slow-moving and ancient, the Gila Monster navigates the desert with quiet, sovereign purpose.", image: "/assets/wildlife/Gila%20Monster.jpg" }
   ],
   california: [
-    { name: "Black Bear", type: "Mammal", tagline: "The Forest Sentinel", desc: "Despite their name, many California black bears are cinnamon or brown. Some 300–500 patrol the park, reshaping the ecosystem as they forage.", image: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=800&q=80" },
-    { name: "California Condor", type: "Bird", tagline: "Return from the Brink", desc: "Once reduced to 27 individuals, condors soar over California wild places again — a living proof of what committed conservation can restore.", image: "https://images.unsplash.com/photo-1624395213043-fa2e123b2656?w=800&q=80" },
-    { name: "Mule Deer", type: "Mammal", tagline: "Meadow Wanderer", desc: "Named for characteristically large ears, mule deer are the most commonly observed large mammals in the park's meadows and valley floors.", image: "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=80" }
+    { name: "Black Bear", type: "Mammal", tagline: "The Forest Sentinel", desc: "Despite their name, many California black bears are cinnamon or brown. Some 300–500 patrol the park, reshaping the ecosystem as they forage.", image: "/assets/wildlife/Black%20Bear.jpg" },
+    { name: "California Condor", type: "Bird", tagline: "Return from the Brink", desc: "Once reduced to 27 individuals, condors soar over California wild places again — a living proof of what committed conservation can restore.", image: "/assets/wildlife/California%20Condor.jpg" },
+    { name: "Mule Deer", type: "Mammal", tagline: "Meadow Wanderer", desc: "Named for characteristically large ears, mule deer are the most commonly observed large mammals in the park's meadows and valley floors.", image: "/assets/wildlife/Mule%20Deer.jpg" }
   ],
   "pacific-northwest": [
-    { name: "Roosevelt Elk", type: "Megafauna", tagline: "Rainforest Monarch", desc: "The largest elk subspecies in North America, thriving in towering temperate rainforests. Their grazing shapes the understory of the entire ecosystem.", image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" },
-    { name: "Black Bear", type: "Mammal", tagline: "Seed Disperser", desc: "Vital ecosystem engineers of the Pacific Northwest. Their berry-eating and salmon-fishing cycle nutrients through the entire coastal watershed.", image: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=800&q=80" },
-    { name: "Bald Eagle", type: "Raptor", tagline: "River Sovereign", desc: "America's national symbol soars over river corridors hunting salmon. A recovery triumph from near-extinction in the 1960s due to DDT poisoning.", image: "https://images.unsplash.com/photo-1611739908785-b06e97a8b8a6?w=800&q=80" }
+    { name: "Roosevelt Elk", type: "Megafauna", tagline: "Rainforest Monarch", desc: "The largest elk subspecies in North America, thriving in towering temperate rainforests. Their grazing shapes the understory of the entire ecosystem.", image: "/assets/wildlife/Roosevelt%20Elk.jpg" },
+    { name: "Black Bear", type: "Mammal", tagline: "Seed Disperser", desc: "Vital ecosystem engineers of the Pacific Northwest. Their berry-eating and salmon-fishing cycle nutrients through the entire coastal watershed.", image: "/assets/wildlife/Black%20Bear.jpg" },
+    { name: "Bald Eagle", type: "Raptor", tagline: "River Sovereign", desc: "America's national symbol soars over river corridors hunting salmon. A recovery triumph from near-extinction in the 1960s due to DDT poisoning.", image: "/assets/wildlife/Bald%20Eagle.jpg" }
   ],
   alaska: [
-    { name: "Brown Bear", type: "Apex Predator", tagline: "Salmon King", desc: "Among the world's largest carnivores. At salmon streams in summer, Alaskan browns gather in rare displays of competitive feeding tolerance.", image: "https://images.unsplash.com/photo-1589656966895-2f33e7653819?w=800&q=80" },
-    { name: "Caribou", type: "Megafauna", tagline: "The Long Walker", desc: "Completing one of Earth's longest terrestrial migrations across tundra and Arctic wilderness. The great herds have walked these routes for 10,000 years.", image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&q=80" },
-    { name: "Dall Sheep", type: "Mammal", tagline: "White Summit", desc: "Snow-white wild sheep whose curved horns record age like rings in wood. They patrol high rocky ridgelines with calm, sovereign confidence.", image: "https://images.unsplash.com/photo-1562969516-27d27c7571ee?w=800&q=80" }
+    { name: "Brown Bear", type: "Apex Predator", tagline: "Salmon King", desc: "Among the world's largest carnivores. At salmon streams in summer, Alaskan browns gather in rare displays of competitive feeding tolerance.", image: "/assets/wildlife/Brown%20Bear.jpg" },
+    { name: "Caribou", type: "Megafauna", tagline: "The Long Walker", desc: "Completing one of Earth's longest terrestrial migrations across tundra and Arctic wilderness. The great herds have walked these routes for 10,000 years.", image: "/assets/wildlife/Caribou.jpg" },
+    { name: "Dall Sheep", type: "Mammal", tagline: "White Summit", desc: "Snow-white wild sheep whose curved horns record age like rings in wood. They patrol high rocky ridgelines with calm, sovereign confidence.", image: "/assets/wildlife/Dall%20Sheep.jpg" }
   ],
   hawaii: [
-    { name: "Nēnē (Hawaiian Goose)", type: "Bird", tagline: "Island Survivor", desc: "Hawaii's state bird and the world's rarest goose. By 1952, only 30 individuals survived. Today over 3,000 exist — a symbol of what restoration can achieve.", image: "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=800&q=80" },
-    { name: "Hawaiian Monk Seal", type: "Marine Mammal", tagline: "Ancient Islander", desc: "One of the world's most endangered seals, with fewer than 1,400 remaining. They have swum Hawaiian waters for 15 million years.", image: "https://images.unsplash.com/photo-1583692647839-66f2b80c5c7d?w=800&q=80" },
-    { name: "Green Sea Turtle (Honu)", type: "Reptile", tagline: "Ancient Navigator", desc: "Navigating Pacific waters for over 100 million years, honu are considered sacred in Hawaiian culture. They return to birth beaches to nest each season.", image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80" }
+    { name: "Nēnē (Hawaiian Goose)", type: "Bird", tagline: "Island Survivor", desc: "Hawaii's state bird and the world's rarest goose. By 1952, only 30 individuals survived. Today over 3,000 exist — a symbol of what restoration can achieve.", image: "/assets/wildlife/Nene%20Hawaiian%20Goose.jpg" },
+    { name: "Hawaiian Monk Seal", type: "Marine Mammal", tagline: "Ancient Islander", desc: "One of the world's most endangered seals, with fewer than 1,400 remaining. They have swum Hawaiian waters for 15 million years.", image: "/assets/wildlife/Hawaiian%20Monk%20Seal.jpg" },
+    { name: "Green Sea Turtle (Honu)", type: "Reptile", tagline: "Ancient Navigator", desc: "Navigating Pacific waters for over 100 million years, honu are considered sacred in Hawaiian culture. They return to birth beaches to nest each season.", image: "/assets/wildlife/Green%20Sea%20Turtle.jpg" }
   ],
   "pacific-islands": [
-    { name: "Coconut Crab", type: "Crustacean", tagline: "Tree Climber", desc: "The world's largest land-living arthropod, capable of climbing tall palm trees to harvest coconuts. Grip strength exceeds 3,300 newtons.", image: "https://images.unsplash.com/photo-1498889444388-e67ea62c464b?w=800&q=80" },
-    { name: "Flying Fox Bat", type: "Mammal", tagline: "Forest Engineer", desc: "With wingspans up to 3 feet, these fruit bats are critical pollinators and seed dispersers. The forest grows where they fly at night.", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" },
-    { name: "Hawksbill Sea Turtle", type: "Reptile", tagline: "Coral Gardener", desc: "Critically endangered turtles that feed on sponges, maintaining reef health by preventing any single species from overrunning the ecosystem.", image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80" }
+    { name: "Coconut Crab", type: "Crustacean", tagline: "Tree Climber", desc: "The world's largest land-living arthropod, capable of climbing tall palm trees to harvest coconuts. Grip strength exceeds 3,300 newtons.", image: "/assets/wildlife/Coconut%20Crab.jpg" },
+    { name: "Flying Fox Bat", type: "Mammal", tagline: "Forest Engineer", desc: "With wingspans up to 3 feet, these fruit bats are critical pollinators and seed dispersers. The forest grows where they fly at night.", image: "/assets/wildlife/Flying%20Fox%20Bat.jpg" },
+    { name: "Hawksbill Sea Turtle", type: "Reptile", tagline: "Coral Gardener", desc: "Critically endangered turtles that feed on sponges, maintaining reef health by preventing any single species from overrunning the ecosystem.", image: "/assets/wildlife/Hawksbill%20Sea%20Turtle.jpg" }
   ],
   caribbean: [
-    { name: "Hawksbill Sea Turtle", type: "Reptile", tagline: "Coral Gardener", desc: "Critically endangered turtles whose curved beaks reach into coral crevices to feed on sponges — maintaining Caribbean reef biodiversity.", image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80" },
-    { name: "Brown Pelican", type: "Bird", tagline: "Dive Bomber", desc: "Spectacular divers that plunge 65 feet into the sea at full speed. Once nearly extinct from DDT, they have made a full and dramatic recovery.", image: "https://images.unsplash.com/photo-1552727131-5fc6af8a4a75?w=800&q=80" },
-    { name: "Leatherback Sea Turtle", type: "Reptile", tagline: "Ancient Drifter", desc: "The world's largest sea turtle, diving to depths of 4,000 feet. They have navigated the world's oceans unchanged for more than 100 million years.", image: "https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=800&q=80" }
+    { name: "Hawksbill Sea Turtle", type: "Reptile", tagline: "Coral Gardener", desc: "Critically endangered turtles whose curved beaks reach into coral crevices to feed on sponges — maintaining Caribbean reef biodiversity.", image: "/assets/wildlife/Hawksbill%20Sea%20Turtle.jpg" },
+    { name: "Brown Pelican", type: "Bird", tagline: "Dive Bomber", desc: "Spectacular divers that plunge 65 feet into the sea at full speed. Once nearly extinct from DDT, they have made a full and dramatic recovery.", image: "/assets/wildlife/Brown%20Pelican.jpg" },
+    { name: "Leatherback Sea Turtle", type: "Reptile", tagline: "Ancient Drifter", desc: "The world's largest sea turtle, diving to depths of 4,000 feet. They have navigated the world's oceans unchanged for more than 100 million years.", image: "/assets/wildlife/Leatherback%20Sea%20Turtle.jpg" }
   ],
 };
 
@@ -230,7 +230,7 @@ const rawParks = [
     description: "Mountain peaks, alpine meadows, and remnants of glaciers along the Continental Divide. Known as the 'Crown of the Continent,' Glacier harbors one of the most intact ecosystems in temperate North America.",
     fee: 35, region: "rockies", bestMonths: ["Jul", "Aug", "Sep"],
     highlights: ["Drive the legendary Going-to-the-Sun Road — 50 miles of engineering wonder over the Continental Divide", "Hike to Hidden Lake Overlook for views across glacially carved peaks that stop the breath", "Photograph grizzly bears, wolves, lynx, and wolverines — large predators still intact in this wilderness"],
-    trails: [{ name: "Hidden Lake Overlook", difficulty: "Moderate", miles: "2.8", gain: "460 ft" }, { name: "Highline Trail", difficulty: "Hard", miles: "14.9", gain: "2,240 ft" }]
+    trails: [{ name: "Hidden Lake Overlook", difficulty: "Moderate", miles: "5.3", gain: "1,335 ft" }, { name: "Highline Trail", difficulty: "Hard", miles: "14.9", gain: "2,240 ft" }]
   },
   {
     id: 23, name: "Glacier Bay", state: "Alaska", established: 1980, area: "3,223,384", visitors: "545K",
@@ -335,7 +335,7 @@ const rawParks = [
     description: "Glacial fjords, massive icefields, and abundant coastal marine life. The Harding Icefield — one of the largest in the US — sends dozens of glaciers flowing down through mountain valleys to the sea.",
     fee: 0, region: "alaska", bestMonths: ["Jun", "Jul", "Aug"],
     highlights: ["Cruise past tidewater glaciers actively calving ice towers the size of apartment buildings", "Spot orcas, humpback whales, Steller sea lions, and sea otters in the productive fjord waters", "Hike the Exit Glacier Nature Trail through a living record of glacial retreat over the past century"],
-    trails: [{ name: "Exit Glacier Overlook Loop", difficulty: "Hard", miles: "8.2", gain: "1,000 ft" }, { name: "Harding Icefield Trail", difficulty: "Strenuous", miles: "8.2", gain: "3,000 ft" }]
+    trails: [{ name: "Exit Glacier Trail", difficulty: "Easy", miles: "2.0", gain: "150 ft" }, { name: "Harding Icefield Trail", difficulty: "Strenuous", miles: "8.2", gain: "3,000 ft" }]
   },
   {
     id: 38, name: "Kings Canyon", state: "California", established: 1940, area: "461,901", visitors: "593K",
@@ -405,7 +405,7 @@ const rawParks = [
     description: "Diverse ecosystems ranging from temperate rainforests to rugged Pacific coastline. Three distinctly different worlds exist within this single park — glacier-capped peaks, ancient rainforest, and wild ocean shore.",
     fee: 35, region: "pacific-northwest", bestMonths: ["Jun", "Jul", "Aug", "Sep"],
     highlights: ["Walk the otherworldly Hoh Rain Forest beneath 300-year-old Sitka spruce draped in luminous moss", "Hike Hurricane Ridge for panoramic views across the entire Olympic Mountain Range to the Pacific", "Comb the wild Pacific coastline at Ruby Beach — sea stacks, tide pools, and driftwood cathedrals"],
-    trails: [{ name: "Hoh River Trail", difficulty: "Easy", miles: "17.4", gain: "400 ft" }, { name: "Hurricane Hill Trail", difficulty: "Moderate", miles: "3.2", gain: "700 ft" }]
+    trails: [{ name: "Hoh River Trail to Five Mile Island", difficulty: "Easy", miles: "10.6", gain: "200 ft" }, { name: "Hurricane Hill Trail", difficulty: "Moderate", miles: "3.2", gain: "700 ft" }]
   },
   {
     id: 48, name: "Petrified Forest", state: "Arizona", established: 1962, area: "221,390", visitors: "505K",
@@ -446,7 +446,7 @@ const rawParks = [
     id: 53, name: "Sequoia", state: "California", established: 1890, area: "404,064", visitors: "1.1M",
     description: "Home to the General Sherman tree — the largest living single-stem tree on Earth by volume at 52,500 cubic feet. The park's giant sequoias have grown here continuously for over 3,000 years.",
     fee: 35, region: "california", bestMonths: ["Jun", "Jul", "Aug", "Sep"],
-    highlights: ["Stand beside General Sherman — the largest living tree on Earth by total volume at 52,500 cubic feet", "Hike through Mariposa Grove as ancient giants tower 300 feet overhead in cathedral silence", "Camp at Lodgepole under the Sierra Nevada's clear dark sky, with the milky way visible above the trees"],
+    highlights: ["Stand beside General Sherman — the largest living tree on Earth by total volume at 52,500 cubic feet", "Hike through Giant Forest as ancient giants tower 300 feet overhead in cathedral silence", "Camp at Lodgepole under the Sierra Nevada's clear dark sky, with the milky way visible above the trees"],
     trails: [{ name: "Congress Trail Loop", difficulty: "Easy", miles: "2.0", gain: "200 ft" }, { name: "High Sierra Trail", difficulty: "Strenuous", miles: "72.0", gain: "12,000 ft" }]
   },
   {
@@ -454,7 +454,7 @@ const rawParks = [
     description: "Rolling hills and waterfalls along the scenic Blue Ridge Mountains. Skyline Drive runs the entire 105-mile length of the park along the ridge, offering overlooks into the Shenandoah Valley and the Piedmont.",
     fee: 30, region: "northeast", bestMonths: ["May", "Jun", "Sep", "Oct"],
     highlights: ["Drive all 105 miles of Skyline Drive through Blue Ridge mountain scenery in peak autumn color", "Hike to Whiteoak Canyon's six waterfalls through some of the oldest old-growth forest in the park", "Watch the autumn foliage color the entire Blue Ridge range in deep shades of amber, scarlet, and gold"],
-    trails: [{ name: "Old Rag Mountain Loop", difficulty: "Strenuous", miles: "9.0", gain: "2,415 ft" }, { name: "Whiteoak Canyon Trail", difficulty: "Hard", miles: "4.6", gain: "1,040 ft" }]
+    trails: [{ name: "Old Rag Mountain Loop", difficulty: "Strenuous", miles: "9.0", gain: "2,510 ft" }, { name: "Whiteoak Canyon Trail", difficulty: "Hard", miles: "4.6", gain: "1,040 ft" }]
   },
   {
     id: 55, name: "Theodore Roosevelt", state: "North Dakota", established: 1978, area: "70,447", visitors: "663K",
@@ -510,7 +510,7 @@ const rawParks = [
     description: "Famous for its granite cliffs Half Dome and El Capitan, and the tallest waterfall in North America. The sheer vertical grandeur of Yosemite Valley — polished by ancient glaciers — remains unmatched on Earth.",
     fee: 35, region: "california", bestMonths: ["Apr", "May", "Jun", "Sep", "Oct"],
     highlights: ["Witness the vertical majesty of El Capitan — the world's largest exposed granite monolith at 3,000 feet", "Stand beneath the full force of Yosemite Falls — the highest waterfall in North America at 2,425 feet", "Walk among giants in Mariposa Grove, where 500 mature giant sequoias have grown for over 3,000 years"],
-    trails: [{ name: "Mist Trail to Vernal Fall", difficulty: "Moderate", miles: "3.0", gain: "1,000 ft" }, { name: "Half Dome Cables", difficulty: "Strenuous", miles: "14.2", gain: "4,800 ft" }]
+    trails: [{ name: "Mist Trail to Vernal Fall", difficulty: "Moderate", miles: "5.4", gain: "1,000 ft" }, { name: "Half Dome Cables", difficulty: "Strenuous", miles: "14.2", gain: "4,800 ft" }]
   },
   {
     id: 63, name: "Zion", state: "Utah", established: 1919, area: "147,237", visitors: "4.6M",

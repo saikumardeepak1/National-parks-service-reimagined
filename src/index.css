@@ -8,6 +8,53 @@
     padding: 0;
     overflow-x: hidden;
     background-color: #fcf9f3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Typography foundation */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  p {
+    line-height: 1.7;
+    max-width: 70ch;
+    text-wrap: pretty;
+  }
+
+  /* Body text sizing for readability */
+  .font-body {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    letter-spacing: 0.005em;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Better focus ring */
+  :focus-visible {
+    outline: 2px solid #c4a46b;
+    outline-offset: 2px;
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(196, 164, 107, 0.25);
+    color: #1c1c18;
+  }
+
+  /* Smooth image loading */
+  img {
+    image-rendering: auto;
   }
 }
 
@@ -147,7 +194,19 @@
     transition: flex 600ms cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
-    height: 500px;
+    height: 100%;
+}
+.panel-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.18);
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 400ms ease;
+}
+.panel-item:hover::after {
+    opacity: 0;
 }
 .panel-item:hover {
     flex: 6;
@@ -177,16 +236,7 @@
     opacity: 1;
     transform: translatey(0)
 }
-.sine-wave-container > div:nth-child(1)  { margin-top: 30px }
-.sine-wave-container > div:nth-child(2)  { margin-top: 65px }
-.sine-wave-container > div:nth-child(3)  { margin-top: 100px }
-.sine-wave-container > div:nth-child(4)  { margin-top: 65px }
-.sine-wave-container > div:nth-child(5)  { margin-top: 30px }
-.sine-wave-container > div:nth-child(6)  { margin-top: 0 }
-.sine-wave-container > div:nth-child(7)  { margin-top: 30px }
-.sine-wave-container > div:nth-child(8)  { margin-top: 65px }
-.sine-wave-container > div:nth-child(9)  { margin-top: 100px }
-.sine-wave-container > div:nth-child(10) { margin-top: 65px }
+/* sine-wave offsets removed for clean alignment */
 
 /* Yosemite Page Elements */
 .perspective-1000 {

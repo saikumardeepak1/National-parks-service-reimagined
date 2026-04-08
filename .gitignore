@@ -23,12 +23,22 @@ dist-ssr
 *.sln
 *.sw?
 
-# Large media assets — host on CDN for production
+# Build output
+dist/
+dist-ssr/
+
+# Large media assets — excluded from repo (too large for GitHub)
 *.mp4
 *.mov
 *.avi
 public/parks/archival/
+public/parks/temp_optimized/
+public/63 NPS LOGO/
+public/63 NPS LOGO PNG/
+public/Wildlife Assets/
 NPS Video Assets/
 NPS Photo Assets/
-public/parks/temp_optimized/
 *.sb-*
+
+# Claude internal
+.claude/

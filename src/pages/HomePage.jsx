@@ -24,38 +24,64 @@ export default function HomePage() {
     <div className="bg-[#FFFFFF] text-[#1A1A1A] h-screen w-screen overflow-hidden font-body selection:bg-surface-container-highest opacity-0 animate-[fadeIn_1.5s_ease-out_forwards]">
       <style>{`@keyframes fadeIn { to { opacity: 1; } }`}</style>
 
-      {/* Ancient Map Background — increased opacity for visible texture */}
+      {/* Hero Background — no overlay, full photo */}
       <div
-        className="fixed inset-0 z-0 pointer-events-none opacity-[0.32] mix-blend-multiply transition-opacity duration-1000"
+        className="fixed inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: 'url(/assets/ancient-map.png)',
+          backgroundImage: 'url(/assets/home-bg.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          filter: 'sepia(0.3) contrast(1.2) brightness(1.0)'
+          backgroundPosition: 'center center',
         }}
       />
 
       <div className="fixed inset-0 z-[100] grain-overlay" />
 
-      {/* Top Nav — logo + title only, no hamburger */}
-      <nav className="sticky top-0 z-[60] w-full bg-surface/90 backdrop-blur-md px-8 py-4 flex justify-between items-center">
-        <Link to="/home" className="flex items-center gap-4 hover:opacity-70 transition-opacity">
-          <img alt="NPS Logo" className="h-14 w-auto flex-shrink-0 drop-shadow-md" src="/assets/nps-logo-official.svg" />
-          <span className="font-label text-[10px] tracking-[0.2em] font-bold text-[#1A1A1A]">NPS ARCHIVE</span>
+      {/* Top Nav */}
+      <nav className="sticky top-0 z-[60] w-full bg-[#FAF8F4]/92 backdrop-blur-md px-8 py-3 flex justify-between items-center border-b border-black/8">
+
+        {/* Logo — same treatment as landing page */}
+        <Link to="/home" className="hover:opacity-70 transition-opacity shrink-0">
+          <img alt="NPS Logo" className="w-16 h-auto drop-shadow-lg" src="/assets/nps-logo-official.svg" />
         </Link>
-        <div className="absolute left-1/2 -translate-x-1/2 top-7">
-          <h1 className="font-headline text-[32px] font-normal leading-none tracking-[0.05em] uppercase text-[#1A1A1A]">
-            National Park Service
-          </h1>
+
+        {/* Newspaper Masthead */}
+        <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center select-none" style={{ minWidth: '340px' }}>
+          {/* Top rule */}
+          <div className="flex items-center w-full gap-2 mb-[3px]">
+            <div className="flex-1 h-[1.5px] bg-[#1A1A1A]/20" />
+            <span className="font-label text-[7px] tracking-[0.5em] uppercase text-black/30">Est. MCMXVI</span>
+            <div className="flex-1 h-[1.5px] bg-[#1A1A1A]/20" />
+          </div>
+          {/* Main masthead title */}
+          <div className="flex items-center gap-3">
+            <span className="text-black/20 text-[11px] leading-none">◆</span>
+            <h1
+              className="font-headline font-bold uppercase leading-none text-[#1A1A1A]"
+              style={{ fontSize: 'clamp(1.25rem, 2.2vw, 1.85rem)', letterSpacing: '0.12em', fontFamily: "'Playfair Display', serif" }}
+            >
+              National Park Service
+            </h1>
+            <span className="text-black/20 text-[11px] leading-none">◆</span>
+          </div>
+          {/* Bottom double rule */}
+          <div className="w-full mt-[3px] space-y-[2px]">
+            <div className="h-[2px] bg-[#1A1A1A]/25" />
+            <div className="h-[0.5px] bg-[#1A1A1A]/15" />
+          </div>
+          {/* Tagline */}
+          <p className="font-label text-[7px] tracking-[0.45em] uppercase text-black/30 mt-[3px]">
+            Archive · All 63 Parks · United States of America
+          </p>
         </div>
-        {/* spacer */}
-        <div className="w-10" />
+
+        {/* Spacer to balance logo */}
+        <div className="w-16 shrink-0" />
       </nav>
 
       {/* Main Content Canvas */}
-      <main className="h-full w-full flex flex-col justify-center items-center px-11 relative">
+      <main className="h-full w-full flex flex-col justify-center items-center px-11 pt-4 pb-20 relative">
         <div className="flex flex-col items-center justify-center w-full">
-          <div className="w-full max-w-[1380px] h-[600px] flex gap-3 sine-wave-container items-start panel-container">
+          <div className="w-full max-w-[1380px] h-[580px] flex gap-3 items-stretch panel-container">
             
             {/* Panel 1: Yosemite */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(62)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -187,14 +213,14 @@ export default function HomePage() {
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" /></svg>
           <span className="font-label text-[9px] tracking-[0.2em] uppercase">Parks</span>
         </Link>
-        <a href="#" className="flex flex-col items-center gap-1 text-black/50 hover:text-black transition-colors">
+        <Link to="/passes" className="flex flex-col items-center gap-1 text-black/50 hover:text-black transition-colors">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z" /></svg>
           <span className="font-label text-[9px] tracking-[0.2em] uppercase">Passes</span>
-        </a>
-        <a href="#" className="flex flex-col items-center gap-1 text-black/50 hover:text-black transition-colors">
+        </Link>
+        <Link to="/reservations" className="flex flex-col items-center gap-1 text-black/50 hover:text-black transition-colors">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
           <span className="font-label text-[9px] tracking-[0.2em] uppercase">Reservations</span>
-        </a>
+        </Link>
         <a href="#" className="flex flex-col items-center gap-1 text-black/50 hover:text-black transition-colors">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" /></svg>
           <span className="font-label text-[9px] tracking-[0.2em] uppercase">Trip Ideas</span>

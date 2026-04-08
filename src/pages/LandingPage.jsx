@@ -64,7 +64,7 @@ export default function LandingPage() {
       </div>
 
       <footer className={`fixed bottom-10 left-0 w-full text-center z-50 transition-all duration-[1000ms] delay-[1500ms] ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-        <p className="font-sans font-medium text-[9px] uppercase tracking-[0.25em] text-white/50 drop-shadow-md">
+        <p className="font-label text-[9px] uppercase tracking-[0.25em] text-white/45 drop-shadow-md">
           Established 1916 · Preserving the Wilderness
         </p>
       </footer>

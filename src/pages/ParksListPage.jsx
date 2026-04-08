@@ -92,11 +92,11 @@ export default function ParksListPage() {
       {/* ── Column Headers ────────────────────────────────────────────────── */}
       <div className="relative z-10 max-w-screen-2xl mx-auto px-8 md:px-14">
         <div className="flex items-center py-4 border-b border-[#1e1c19]">
-          <span className="w-14 font-label text-[8px] tracking-[0.3em] uppercase text-[#282520]">No.</span>
-          <span className="flex-1 font-label text-[8px] tracking-[0.3em] uppercase text-[#282520]">Park</span>
-          <span className="hidden md:block w-52 font-label text-[8px] tracking-[0.3em] uppercase text-[#282520]">State</span>
-          <span className="hidden lg:block w-24 font-label text-[8px] tracking-[0.3em] uppercase text-[#282520]">Est.</span>
-          <span className="hidden lg:block w-28 font-label text-[8px] tracking-[0.3em] uppercase text-[#282520]">Visitors</span>
+          <span className="w-14 font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">No.</span>
+          <span className="flex-1 font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">Park</span>
+          <span className="hidden md:block w-52 font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">State</span>
+          <span className="hidden lg:block w-24 font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">Est.</span>
+          <span className="hidden lg:block w-28 font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">Visitors</span>
           <span className="w-8" />
         </div>
 

@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Link, useNavigate, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { parksData, regionWildlife } from '../data/parksData';
+import ParkEmblem from '../components/ParkEmblem';
+import { TextScramble } from '../components/ui/TextScramble';
 
 // ── Reveal wrapper ─────────────────────────────────────────────────────────────
 function Reveal({ children, delay = 0, className = '' }) {
@@ -110,13 +112,12 @@ export default function ParkPage() {
       <div className="grain-overlay" />
 
       {/* ── Sticky Nav ──────────────────────────────────────────────────────── */}
-      <nav className="sticky top-0 z-[60] w-full bg-surface/90 backdrop-blur-md px-8 py-4 flex justify-between items-center border-b border-outline-variant/10">
-        <Link to="/home" className="flex items-center gap-3 hover:opacity-60 transition-opacity">
-          <img alt="NPS" className="h-12 w-auto drop-shadow-sm" src="/assets/nps-logo-official.svg" />
-          <span className="font-label text-[10px] tracking-[0.2em] font-bold text-[#1A1A1A]">NPS ARCHIVE</span>
+      <nav className="sticky top-0 z-[60] w-full bg-surface/92 backdrop-blur-xl px-8 py-4 flex justify-between items-center border-b border-outline-variant/10">
+        <Link to="/home" className="hover:opacity-70 transition-opacity shrink-0">
+          <img alt="NPS" className="w-16 h-auto drop-shadow-lg" src="/assets/nps-logo-official.svg" />
         </Link>
         <div className="absolute left-1/2 -translate-x-1/2">
-          <h2 className="font-headline text-lg tracking-widest uppercase hidden md:block">{park.name} National Park</h2>
+          <h2 className="font-label text-[11px] md:text-xs tracking-[0.25em] uppercase hidden md:block font-medium">{park.name} National Park</h2>
         </div>
         <button
           onClick={() => navigate('/parks')}
@@ -171,15 +172,20 @@ export default function ParkPage() {
           )}
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50" />
 
-          <div className="relative z-10 text-center text-white space-y-4 px-4">
-            <p className="font-label text-xs tracking-[0.4em] uppercase opacity-80">{park.state.toUpperCase()}, UNITED STATES</p>
-            <h1
+          <div className="relative z-10 text-center text-white space-y-5 px-4">
+            <p className="font-label text-xs tracking-[0.4em] uppercase opacity-70">{park.state.toUpperCase()}, UNITED STATES</p>
+            <TextScramble
+              as="h1"
+              duration={1.2}
+              speed={0.03}
+              characterSet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+              trigger={true}
               className="font-headline italic leading-none"
               style={{ fontSize: 'clamp(3rem, 12vw, 10rem)', fontFamily: "'Playfair Display', serif" }}
             >
               {park.name}
-            </h1>
-            <p className="font-label text-[10px] tracking-[0.5em] uppercase opacity-60">
+            </TextScramble>
+            <p className="font-label text-[11px] tracking-[0.5em] uppercase opacity-50 mt-2">
               ESTABLISHED {park.established} · {park.area} ACRES
             </p>
           </div>
@@ -204,44 +210,43 @@ export default function ParkPage() {
         </div>
 
         {/* ── Passport / Stats ──────────────────────────────────────────────── */}
-        <section className="py-24 px-8 max-w-5xl mx-auto flex flex-col items-center text-center">
+        <section className="py-28 md:py-36 px-8 max-w-5xl mx-auto flex flex-col items-center text-center">
           <Reveal>
-            <div className="w-40 h-40 rounded-full border-[3px] border-primary/10 flex items-center justify-center mb-16 relative mx-auto">
-              <div className="absolute inset-2 border border-primary/5 rounded-full" />
-              <div className="text-center p-4">
-                <p className="font-headline italic text-3xl text-primary/40 -rotate-12">{park.name}</p>
+            <div className="flex flex-col items-center mb-12">
+              <div className="w-44 drop-shadow-2xl">
+                <ParkEmblem park={park} />
               </div>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <h3 className="font-headline text-4xl mb-8 max-w-2xl leading-relaxed">
+            <h3 className="font-headline text-3xl md:text-4xl mb-8 max-w-2xl leading-snug">
               {park.description.split('.')[0]}.
             </h3>
           </Reveal>
-          <Reveal delay={0.15} className="flex flex-wrap justify-center gap-12 mb-16">
+          <Reveal delay={0.15} className="flex flex-wrap justify-center gap-12 md:gap-16 mb-16">
             <div className="text-center">
-              <p className="font-label text-[10px] tracking-widest opacity-40 uppercase mb-2">Total Area</p>
+              <p className="font-label text-[10px] tracking-widest opacity-50 uppercase mb-2">Total Area</p>
               <p className="font-headline text-xl">{park.area} Acres</p>
             </div>
             <div className="text-center">
-              <p className="font-label text-[10px] tracking-widest opacity-40 uppercase mb-2">Annual Visitors</p>
+              <p className="font-label text-[10px] tracking-widest opacity-50 uppercase mb-2">Annual Visitors</p>
               <p className="font-headline text-xl">{park.visitors}</p>
             </div>
             <div className="text-center">
-              <p className="font-label text-[10px] tracking-widest opacity-40 uppercase mb-2">Established</p>
+              <p className="font-label text-[10px] tracking-widest opacity-50 uppercase mb-2">Established</p>
               <p className="font-headline text-xl">{park.established}</p>
             </div>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="font-body text-lg text-on-surface/70 leading-relaxed max-w-3xl first-letter:text-5xl first-letter:font-headline first-letter:float-left first-letter:mr-3">
+            <p className="font-body text-lg md:text-xl text-on-surface/75 leading-relaxed max-w-3xl first-letter:text-5xl first-letter:font-headline first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-1">
               {park.description}
             </p>
           </Reveal>
         </section>
 
         {/* ── Chapter Tabs ──────────────────────────────────────────────────── */}
-        <div className="sticky top-[64px] z-40 bg-surface border-y border-outline-variant/10">
-          <div className="max-w-screen-xl mx-auto px-8 flex justify-center gap-10 py-5 overflow-x-auto">
+        <div className="sticky top-[64px] z-40 bg-surface/95 backdrop-blur-md border-y border-outline-variant/10">
+          <div className="max-w-screen-xl mx-auto px-8 flex justify-center gap-8 md:gap-10 py-5 overflow-x-auto">
             {tabs.map(tab => (
               <button
                 key={tab}
@@ -249,10 +254,10 @@ export default function ParkPage() {
                   setActiveTab(tab);
                   document.getElementById(tab)?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className={`font-label text-[10px] tracking-[0.2em] uppercase transition-colors pb-1 ${
+                className={`font-label text-[11px] tracking-[0.2em] uppercase transition-colors pb-1 whitespace-nowrap ${
                   activeTab === tab
                     ? 'text-primary border-b border-primary'
-                    : 'text-on-surface/40 hover:text-primary'
+                    : 'text-on-surface/45 hover:text-primary'
                 }`}
               >
                 {tab}
@@ -271,11 +276,11 @@ export default function ParkPage() {
             />
           </div>
           <div className="bg-surface-container-low p-12 md:p-20 flex flex-col justify-center">
-            <p className="font-label text-[10px] tracking-[0.4em] uppercase mb-10 opacity-50">Why Visit</p>
-            <h2 className="font-headline text-4xl md:text-5xl mb-10 leading-tight">
+            <p className="font-label text-[10px] tracking-[0.4em] uppercase mb-10 opacity-55">Why Visit</p>
+            <h2 className="font-headline text-3xl md:text-5xl mb-10 leading-snug">
               Why the Curator Recommends {park.name}
             </h2>
-            <ul className="space-y-8 font-body text-xl text-on-surface/80">
+            <ul className="space-y-8 font-body text-lg md:text-xl text-on-surface/80">
               {park.highlights.map((h, i) => (
                 <li key={i} className="flex gap-6">
                   <span className="font-headline italic text-primary/30 shrink-0">0{i + 1}</span>
@@ -287,11 +292,11 @@ export default function ParkPage() {
         </section>
 
         {/* ── Wildlife ──────────────────────────────────────────────────────── */}
-        <section className="py-24 px-8 bg-surface-container-highest/30" id="wildlife">
+        <section className="py-28 md:py-36 px-8 bg-surface-container-highest/30" id="wildlife">
           <div className="max-w-screen-xl mx-auto">
             <Reveal className="flex items-baseline gap-4 mb-16">
               <h2 className="font-headline text-4xl italic">Wildlife</h2>
-              <span className="font-label text-[10px] tracking-[0.4em] uppercase opacity-40">The Park's Inhabitants</span>
+              <span className="font-label text-[10px] tracking-[0.4em] uppercase opacity-50">The Park's Inhabitants</span>
             </Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {wildlife.map((animal, i) => (
@@ -304,13 +309,13 @@ export default function ParkPage() {
         </section>
 
         {/* ── Trails ────────────────────────────────────────────────────────── */}
-        <section className="py-24 px-8" id="trails">
+        <section className="py-28 md:py-36 px-8" id="trails">
           <div className="max-w-screen-xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-16">
               <div className="lg:w-1/2">
                 <Reveal>
-                  <h2 className="font-headline text-5xl mb-8">Iconic Trails</h2>
-                  <p className="font-body text-lg text-on-surface/60 mb-12">
+                  <h2 className="font-headline text-4xl md:text-5xl mb-8 leading-snug">Iconic Trails</h2>
+                  <p className="font-body text-lg md:text-xl text-on-surface/65 mb-12 leading-relaxed">
                     These routes define the {park.name} experience — from accessible valley walks to demanding alpine ascents.
                   </p>
                 </Reveal>
@@ -324,7 +329,7 @@ export default function ParkPage() {
                             {trail.difficulty}
                           </span>
                         </div>
-                        <div className="flex gap-6 font-label text-[10px] tracking-widest opacity-60 mb-4">
+                        <div className="flex gap-6 font-label text-[11px] tracking-widest opacity-60 mb-4">
                           <span>{trail.miles} MILES</span>
                           <span>{trail.gain} GAIN</span>
                         </div>
@@ -354,7 +359,7 @@ export default function ParkPage() {
         </section>
 
         {/* ── Planning ──────────────────────────────────────────────────────── */}
-        <section className="py-24 px-8 bg-[#0d1a0f] text-white" id="planning">
+        <section className="py-28 md:py-36 px-8 bg-[#0d1a0f] text-white" id="planning">
           <div className="max-w-screen-xl mx-auto">
             <Reveal>
               <h2 className="font-headline text-4xl italic mb-16 text-center">Seasonal Pacing</h2>
@@ -377,8 +382,8 @@ export default function ParkPage() {
 
             <div className="grid md:grid-cols-2 gap-24">
               <Reveal>
-                <h4 className="font-label text-[10px] tracking-[0.4em] uppercase opacity-40 mb-8">BEST TIME TO VISIT</h4>
-                <p className="font-body text-lg opacity-80 leading-relaxed">
+                <h4 className="font-label text-[10px] tracking-[0.4em] uppercase opacity-50 mb-8">BEST TIME TO VISIT</h4>
+                <p className="font-body text-lg md:text-xl opacity-85 leading-relaxed">
                   Peak season runs through{' '}
                   <span className="text-[#c4a46b]">
                     {park.bestMonths.slice(0, 3).join(', ')}
@@ -388,8 +393,8 @@ export default function ParkPage() {
                 </p>
               </Reveal>
               <Reveal delay={0.1}>
-                <h4 className="font-label text-[10px] tracking-[0.4em] uppercase opacity-40 mb-8">NEED TO KNOW</h4>
-                <ul className="space-y-6 font-body text-lg opacity-80">
+                <h4 className="font-label text-[10px] tracking-[0.4em] uppercase opacity-50 mb-8">NEED TO KNOW</h4>
+                <ul className="space-y-6 font-body text-lg md:text-xl opacity-85">
                   <li className="flex items-start gap-4">
                     <span className="shrink-0 mt-1 text-[#c4a46b]">◆</span>
                     Advance reservations may be required during peak season. Check nps.gov for current entry mandates.
@@ -409,11 +414,11 @@ export default function ParkPage() {
         </section>
 
         {/* ── Gallery ───────────────────────────────────────────────────────── */}
-        <section className="py-24 px-4" id="gallery">
+        <section className="py-28 md:py-36 px-4" id="gallery">
           <Reveal className="max-w-screen-2xl mx-auto px-4 mb-12">
             <div className="flex items-baseline gap-4">
               <h2 className="font-headline text-4xl italic">Gallery</h2>
-              <span className="font-label text-[10px] tracking-[0.4em] uppercase opacity-40">The Landscape in Frame</span>
+              <span className="font-label text-[10px] tracking-[0.4em] uppercase opacity-50">The Landscape in Frame</span>
             </div>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
