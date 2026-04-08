@@ -16,7 +16,8 @@ function SessionGate({ children }) {
 
 function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home"     element={<SessionGate><HomePage /></SessionGate>} />
