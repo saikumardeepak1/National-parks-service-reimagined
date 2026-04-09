@@ -174,46 +174,48 @@ export default function ReservationsPage() {
         </section>
 
         {/* Demand Overview */}
-        <section className="py-28 md:py-36 px-8 max-w-3xl mx-auto text-center">
-          <Reveal>
-            <p className="font-label text-[10px] tracking-[0.4em] uppercase opacity-40 mb-8 text-center w-full">WHY RESERVATIONS MATTER</p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h2 className="font-headline text-4xl md:text-5xl mb-10 leading-tight text-center text-balance mx-auto" style={{ maxWidth: '22ch' }}>
-              312 million visits per year. Planning ahead is no longer optional.
-            </h2>
-          </Reveal>
-          <Reveal delay={0.15}>
-            <p className="font-body text-xl text-on-surface/75 leading-relaxed max-w-2xl mx-auto mb-16">
-              National park visitation has surged 60% since 2000. To protect both the parks and the visitor experience, an increasing number of parks now require advance reservations during peak season. Here is when demand is highest.
-            </p>
-          </Reveal>
+        <section className="py-28 md:py-36 px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <Reveal className="w-full">
+              <p className="font-label text-[10px] tracking-[0.4em] uppercase opacity-40 mb-8 max-w-none">WHY RESERVATIONS MATTER</p>
+            </Reveal>
+            <Reveal delay={0.1} className="w-full">
+              <h2 className="font-headline text-4xl md:text-5xl mb-10 leading-tight">
+                312 million visits per year. Planning ahead is no longer optional.
+              </h2>
+            </Reveal>
+            <Reveal delay={0.15} className="w-full">
+              <p className="font-body text-xl text-on-surface/75 leading-relaxed mb-16">
+                National park visitation has surged 60% since 2000. To protect both the parks and the visitor experience, an increasing number of parks now require advance reservations during peak season. Here is when demand is highest.
+              </p>
+            </Reveal>
 
-          {/* Monthly demand chart */}
-          <Reveal delay={0.2}>
-            <div className="flex items-end gap-2 px-4 w-full" style={{ height: '200px' }}>
-              {monthlyDemand.map((m, i) => (
-                <div key={i} className="flex-1 flex flex-col items-center justify-end h-full">
-                  <motion.div
-                    className="w-full rounded-sm"
-                    style={{
-                      backgroundColor: m.level >= 8 ? '#8b6d2e' : m.level >= 5 ? '#c4a46b' : '#d4c4a0',
-                    }}
-                    initial={{ height: 0 }}
-                    whileInView={{ height: m.level * 17 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                  />
-                  <span className={`font-label text-[9px] tracking-widest mt-3 ${m.level >= 8 ? 'text-[#8b6d2e]' : 'text-on-surface/50'}`}>
-                    {m.month}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <p className="font-label text-[9px] tracking-[0.3em] uppercase text-on-surface/40 mt-4 text-center w-full">
-              SYSTEM-WIDE RESERVATION DEMAND BY MONTH
-            </p>
-          </Reveal>
+            {/* Monthly demand chart */}
+            <Reveal delay={0.2} className="w-full">
+              <div className="flex items-end gap-2 w-full" style={{ height: '200px' }}>
+                {monthlyDemand.map((m, i) => (
+                  <div key={i} className="flex-1 flex flex-col items-center justify-end h-full">
+                    <motion.div
+                      className="w-full rounded-sm"
+                      style={{
+                        backgroundColor: m.level >= 8 ? '#8b6d2e' : m.level >= 5 ? '#c4a46b' : '#d4c4a0',
+                      }}
+                      initial={{ height: 0 }}
+                      whileInView={{ height: m.level * 17 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                    />
+                    <span className={`font-label text-[9px] tracking-widest mt-3 ${m.level >= 8 ? 'text-[#8b6d2e]' : 'text-on-surface/50'}`}>
+                      {m.month}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <p className="font-label text-[9px] tracking-[0.3em] uppercase text-on-surface/40 mt-4 text-center max-w-none">
+                SYSTEM-WIDE RESERVATION DEMAND BY MONTH
+              </p>
+            </Reveal>
+          </div>
         </section>
 
         {/* Parks Requiring Reservations */}
