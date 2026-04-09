@@ -71,7 +71,7 @@ export default function HomePage() {
             <div className="h-[0.5px] bg-[#1A1A1A]/15" />
           </div>
           {/* Tagline */}
-          <p className="font-label text-[7px] tracking-[0.45em] uppercase text-black/30 mt-[3px]">
+          <p className="font-label text-[7px] tracking-[0.25em] uppercase text-black/30 mt-[3px] whitespace-nowrap">
             Archive · All 63 Parks · United States of America
           </p>
         </div>
