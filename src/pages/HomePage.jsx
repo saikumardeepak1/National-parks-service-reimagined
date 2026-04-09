@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
+const B = import.meta.env.BASE_URL;
+
 export default function HomePage() {
   const navigate = useNavigate();
 
@@ -28,7 +30,7 @@ export default function HomePage() {
       <div
         className="fixed inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: 'url(/assets/home-bg.jpg)',
+          backgroundImage: `url(${B}assets/home-bg.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
         }}
@@ -41,7 +43,7 @@ export default function HomePage() {
 
         {/* Logo — same treatment as landing page */}
         <Link to="/home" className="hover:opacity-70 transition-opacity shrink-0">
-          <img alt="NPS Logo" className="w-16 h-auto drop-shadow-lg" src="/assets/nps-logo-official.svg" />
+          <img alt="NPS Logo" className="w-16 h-auto drop-shadow-lg" src={`${B}assets/nps-logo-official.svg`} />
         </Link>
 
         {/* Newspaper Masthead */}
@@ -85,7 +87,7 @@ export default function HomePage() {
             
             {/* Panel 1: Yosemite */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(62)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Yosemite" src="/parks/Yosemite%20Photo.jpg" />
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Yosemite" src={`${B}parks/Yosemite%20Photo.jpg`} />
               <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
                 <source src="https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Yosemite.video.mp4" type="video/mp4" />
               </video>
@@ -97,7 +99,7 @@ export default function HomePage() {
 
             {/* Panel 2: Glacier */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(22)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Glacier" src="/parks/Glacier%20Photo.jpg" />
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Glacier" src={`${B}parks/Glacier%20Photo.jpg`} />
               <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
                 <source src="https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Glacier.Video.mp4" type="video/mp4" />
               </video>
@@ -109,7 +111,7 @@ export default function HomePage() {
 
             {/* Panel 3: Olympic */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(47)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Olympic" src="/parks/olympic%20national%20park.jpg" />
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Olympic" src={`${B}parks/olympic%20national%20park.jpg`} />
               <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
                 <source src="https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Olympic.video.mp4" type="video/mp4" />
               </video>
@@ -121,7 +123,7 @@ export default function HomePage() {
 
             {/* Panel 4: North Cascades */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(46)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="North Cascades" src="/parks/North%20Cascades%20Photo.jpg" />
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="North Cascades" src={`${B}parks/North%20Cascades%20Photo.jpg`} />
               <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
                 <source src="https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/North.cascades.Video.mp4" type="video/mp4" />
               </video>
@@ -133,7 +135,7 @@ export default function HomePage() {
 
             {/* Panel 5: Denali */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(17)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Denali" src="/parks/denali%20photo.jpg" />
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Denali" src={`${B}parks/denali%20photo.jpg`} />
               <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
                 <source src="https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Denali.Video.mp4" type="video/mp4" />
               </video>
@@ -145,7 +147,7 @@ export default function HomePage() {
 
             {/* Panel 6: Zion */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(63)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Zion" src="/parks/Zion%20Photo.jpg" />
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Zion" src={`${B}parks/Zion%20Photo.jpg`} />
               <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
                 <source src="https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Zion.Video.mp4" type="video/mp4" />
               </video>
@@ -157,7 +159,7 @@ export default function HomePage() {
 
             {/* Panel 7: Grand Teton */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(25)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Grand Teton" src="/parks/grand%20teton%20photo.jpg" />
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Grand Teton" src={`${B}parks/grand%20teton%20photo.jpg`} />
               <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
                 <source src="https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Grand.Teton.Video.mp4" type="video/mp4" />
               </video>
@@ -169,7 +171,7 @@ export default function HomePage() {
 
             {/* Panel 8: Yellowstone */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(61)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Yellowstone" src="/parks/Yellowstone%20photo.jpg" />
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Yellowstone" src={`${B}parks/Yellowstone%20photo.jpg`} />
               <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
                 <source src="https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Yellow.stone.video.mp4" type="video/mp4" />
               </video>
@@ -181,7 +183,7 @@ export default function HomePage() {
 
             {/* Panel 9: Great Sand Dunes */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(27)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Great Sand Dunes" src="/parks/Great%20Sand%20Dunes%20photo.jpg" />
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Great Sand Dunes" src={`${B}parks/Great%20Sand%20Dunes%20photo.jpg`} />
               <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
                 <source src="https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/great.sand.sunes.video.mp4" type="video/mp4" />
               </video>
@@ -193,7 +195,7 @@ export default function HomePage() {
 
             {/* Panel 10: Hawai'i Volcanoes */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(31)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Hawai'i Volcanoes" src="/parks/Volcanos%20photo.jpg" />
+              <img className="photo-bg absolute inset-0 w-full h-full object-cover" alt="Hawai'i Volcanoes" src={`${B}parks/Volcanos%20photo.jpg`} />
               <video loop muted playsInline className="absolute inset-0 w-full h-full object-cover pointer-events-none">
                 <source src="https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Volcanos.video.mp4" type="video/mp4" />
               </video>

@@ -135,7 +135,7 @@ export default function PassesPage() {
       {/* Nav */}
       <nav className="sticky top-0 z-[60] w-full bg-surface/90 backdrop-blur-md px-8 py-4 flex justify-between items-center border-b border-outline-variant/10">
         <Link to="/home" className="hover:opacity-70 transition-opacity shrink-0">
-          <img alt="NPS" className="w-16 h-auto drop-shadow-lg" src="/assets/nps-logo-official.svg" />
+          <img alt="NPS" className="w-16 h-auto drop-shadow-lg" src={`${import.meta.env.BASE_URL}assets/nps-logo-official.svg`} />
         </Link>
         <div className="absolute left-1/2 -translate-x-1/2">
           <h2 className="font-headline text-lg tracking-widest uppercase hidden md:block">Passes & Permits</h2>

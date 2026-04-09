@@ -15,7 +15,7 @@ function nameToSlug(name) {
 
 export default function ParkEmblem({ park }) {
   const slug = nameToSlug(park.name);
-  const src = `/assets/emblems/${slug}.png`;
+  const src = `${import.meta.env.BASE_URL}assets/emblems/${slug}.png`;
 
   return (
     <img

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const B = import.meta.env.BASE_URL;
+
 export default function LandingPage() {
   const navigate = useNavigate();
   const [isFadingOut, setIsFadingOut] = useState(false);
@@ -32,7 +34,7 @@ export default function LandingPage() {
       {/* Hero Background */}
       <div
         className={`absolute inset-0 z-0 bg-cover bg-center transition-all duration-[2000ms] ease-out ${isLoaded ? 'scale-100 opacity-100' : 'scale-110 opacity-0'}`}
-        style={{ backgroundImage: 'url(/assets/landing-hero.webp)' }}
+        style={{ backgroundImage: `url(${B}assets/landing-hero.webp)` }}
       >
         <div className="absolute inset-0 bg-black/40" />
       </div>
@@ -41,7 +43,7 @@ export default function LandingPage() {
 
       {/* NPS Logo */}
       <div className="fixed top-8 left-8 z-[60]">
-        <img alt="NPS Logo" className="w-16 h-auto drop-shadow-lg" src="/assets/nps-logo-official.svg" />
+        <img alt="NPS Logo" className="w-16 h-auto drop-shadow-lg" src={`${B}assets/nps-logo-official.svg`} />
       </div>
 
       {/* Hero Title */}
