@@ -179,7 +179,7 @@ export default function ReservationsPage() {
             <p className="font-label text-[10px] tracking-[0.4em] uppercase opacity-40 mb-8">WHY RESERVATIONS MATTER</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="font-headline text-4xl md:text-5xl mb-10 leading-tight">
+            <h2 className="font-headline text-4xl md:text-5xl mb-10 leading-tight text-center text-balance mx-auto" style={{ maxWidth: '22ch' }}>
               312 million visits per year. Planning ahead is no longer optional.
             </h2>
           </Reveal>
