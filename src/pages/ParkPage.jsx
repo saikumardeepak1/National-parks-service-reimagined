@@ -138,7 +138,12 @@ export default function ParkPage() {
         <a className="font-label text-[10px] tracking-[0.2em] uppercase border border-white py-3 text-center hover:bg-white hover:text-[#0d1a0f] transition-all" href="#">
           Book Now
         </a>
-        <a className="font-label text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" href="#">
+        <a
+          className="font-label text-[10px] tracking-[0.2em] uppercase flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity"
+          href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(park.name + ' National Park, ' + park.state)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           ↗ Directions
         </a>
       </aside>

@@ -47,7 +47,7 @@ export default function HomePage() {
         </Link>
 
         {/* Newspaper Masthead */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center select-none" style={{ minWidth: '340px' }}>
+        <div className="flex-1 flex flex-col items-center select-none px-4">
           {/* Top rule */}
           <div className="flex items-center w-full gap-2 mb-[3px]">
             <div className="flex-1 h-[1.5px] bg-[#1A1A1A]/20" />

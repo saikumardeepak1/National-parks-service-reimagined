@@ -147,7 +147,7 @@ export default function ParksListPage() {
 
             {/* State */}
             <span
-              className="relative z-10 hidden md:block w-52 font-label text-[10px] tracking-[0.2em] uppercase transition-colors duration-300"
+              className="relative z-10 hidden md:block w-52 text-center font-label text-[10px] tracking-[0.2em] uppercase transition-colors duration-300"
               style={{ color: hoveredPark?.id === park.id ? '#c4a46b' : '#8a8070' }}
             >
               {park.state}
@@ -155,7 +155,7 @@ export default function ParksListPage() {
 
             {/* Established */}
             <span
-              className="relative z-10 hidden lg:block w-24 font-label text-[10px] tracking-widest transition-colors duration-300"
+              className="relative z-10 hidden lg:block w-24 text-center font-label text-[10px] tracking-widest transition-colors duration-300"
               style={{ color: hoveredPark?.id === park.id ? '#c4a46b' : '#6e6860' }}
             >
               {park.established}
@@ -163,7 +163,7 @@ export default function ParksListPage() {
 
             {/* Visitors */}
             <span
-              className="relative z-10 hidden lg:block w-28 font-label text-[10px] tracking-widest transition-colors duration-300"
+              className="relative z-10 hidden lg:block w-28 text-center font-label text-[10px] tracking-widest transition-colors duration-300"
               style={{ color: hoveredPark?.id === park.id ? '#6e6860' : '#544f48' }}
             >
               {park.visitors}
