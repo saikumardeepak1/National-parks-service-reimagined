@@ -64,16 +64,16 @@ export const regionWildlife = {
 
 // ─── Featured Assets (HQ photos + videos for 10 parks) ───────────────────────
 const featuredAssets = {
-  17: { heroPhoto: '/parks/denali%20photo.jpg', heroVideo: '/parks/Denali%20Video.mp4' },
-  22: { heroPhoto: '/parks/Glacier%20Photo.jpg', heroVideo: '/parks/Glacier%20Video.mp4' },
-  25: { heroPhoto: '/parks/grand%20teton%20photo.jpg', heroVideo: '/parks/Grand%20Teton%20Video.mp4' },
-  27: { heroPhoto: '/parks/Great%20Sand%20Dunes%20photo.jpg', heroVideo: '/parks/great%20sand%20sunes%20video.mp4' },
-  31: { heroPhoto: '/parks/Volcanos%20photo.jpg', heroVideo: '/parks/Volcanos%20video.mp4' },
-  46: { heroPhoto: '/parks/North%20Cascades%20Photo.jpg', heroVideo: '/parks/North%20cascades%20Video.mp4' },
-  47: { heroPhoto: '/parks/olympic%20national%20park.jpg', heroVideo: '/parks/Olympic%20video.mp4' },
-  61: { heroPhoto: '/parks/Yellowstone%20photo.jpg', heroVideo: '/parks/Yellow%20stone%20video.mp4' },
-  62: { heroPhoto: '/parks/Yosemite%20Photo.jpg', heroVideo: '/parks/Yosemite%20video.mp4' },
-  63: { heroPhoto: '/parks/Zion%20Photo.jpg', heroVideo: '/parks/Zion%20Video.mp4' },
+  17: { heroPhoto: '/parks/denali%20photo.jpg', heroVideo: 'https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Denali.Video.mp4' },
+  22: { heroPhoto: '/parks/Glacier%20Photo.jpg', heroVideo: 'https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Glacier.Video.mp4' },
+  25: { heroPhoto: '/parks/grand%20teton%20photo.jpg', heroVideo: 'https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Grand.Teton.Video.mp4' },
+  27: { heroPhoto: '/parks/Great%20Sand%20Dunes%20photo.jpg', heroVideo: 'https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/great.sand.sunes.video.mp4' },
+  31: { heroPhoto: '/parks/Volcanos%20photo.jpg', heroVideo: 'https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Volcanos.video.mp4' },
+  46: { heroPhoto: '/parks/North%20Cascades%20Photo.jpg', heroVideo: 'https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/North.cascades.Video.mp4' },
+  47: { heroPhoto: '/parks/olympic%20national%20park.jpg', heroVideo: 'https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Olympic.video.mp4' },
+  61: { heroPhoto: '/parks/Yellowstone%20photo.jpg', heroVideo: 'https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Yellow.stone.video.mp4' },
+  62: { heroPhoto: '/parks/Yosemite%20Photo.jpg', heroVideo: 'https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Yosemite.video.mp4' },
+  63: { heroPhoto: '/parks/Zion%20Photo.jpg', heroVideo: 'https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/Zion.Video.mp4' },
 };
 
 // ─── Raw Park Data ────────────────────────────────────────────────────────────
@@ -534,7 +534,7 @@ export const parksData = rawParks.map(park => {
   if (park.name === "Haleakalā")          archiveFile = `${idStr}_Haleakal_National_Park.jpg`;
   if (park.name === "Wrangell–St. Elias") archiveFile = `${idStr}_Wrangell_St_Elias_National_Park.jpg`;
 
-  const archivalImage = `/parks/archival/${archiveFile}`;
+  const archivalImage = `https://github.com/saikumardeepak1/National-parks-service-reimagined/releases/download/assets-v1/${archiveFile}`;
   const featured = featuredAssets[park.id] || {};
 
   return {
