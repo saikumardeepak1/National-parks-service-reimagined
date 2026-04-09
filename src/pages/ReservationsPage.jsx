@@ -176,7 +176,7 @@ export default function ReservationsPage() {
         {/* Demand Overview */}
         <section className="py-28 md:py-36 px-8 max-w-3xl mx-auto text-center">
           <Reveal>
-            <p className="font-label text-[10px] tracking-[0.4em] uppercase opacity-40 mb-8">WHY RESERVATIONS MATTER</p>
+            <p className="font-label text-[10px] tracking-[0.4em] uppercase opacity-40 mb-8 text-center w-full">WHY RESERVATIONS MATTER</p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-headline text-4xl md:text-5xl mb-10 leading-tight text-center text-balance mx-auto" style={{ maxWidth: '22ch' }}>
@@ -191,7 +191,7 @@ export default function ReservationsPage() {
 
           {/* Monthly demand chart */}
           <Reveal delay={0.2}>
-            <div className="flex items-end gap-2 px-4" style={{ height: '200px' }}>
+            <div className="flex items-end gap-2 px-4 w-full" style={{ height: '200px' }}>
               {monthlyDemand.map((m, i) => (
                 <div key={i} className="flex-1 flex flex-col items-center justify-end h-full">
                   <motion.div
@@ -210,7 +210,7 @@ export default function ReservationsPage() {
                 </div>
               ))}
             </div>
-            <p className="font-label text-[9px] tracking-[0.3em] uppercase text-on-surface/40 mt-4">
+            <p className="font-label text-[9px] tracking-[0.3em] uppercase text-on-surface/40 mt-4 text-center w-full">
               SYSTEM-WIDE RESERVATION DEMAND BY MONTH
             </p>
           </Reveal>
