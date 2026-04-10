@@ -23,7 +23,7 @@ export default function HomePage() {
   const goToPark = (id) => navigate(`/park/${id}`);
 
   return (
-    <div className="bg-[#FFFFFF] text-[#1A1A1A] h-screen w-screen overflow-hidden font-body selection:bg-surface-container-highest opacity-0 animate-[fadeIn_1.5s_ease-out_forwards]">
+    <div className="bg-[#FFFFFF] text-[#1A1A1A] h-screen w-screen overflow-hidden font-body selection:bg-surface-container-highest opacity-0 animate-[fadeIn_1.5s_ease-out_forwards] flex flex-col">
       <style>{`@keyframes fadeIn { to { opacity: 1; } }`}</style>
 
       {/* Hero Background — no overlay, full photo */}
@@ -47,31 +47,31 @@ export default function HomePage() {
         </Link>
 
         {/* Newspaper Masthead */}
-        <div className="flex-1 flex flex-col items-center select-none px-4">
-          {/* Top rule */}
-          <div className="flex items-center w-full gap-2 mb-[3px]">
+        <div className="flex-1 flex flex-col items-center select-none px-2 md:px-4 overflow-hidden">
+          {/* Top rule — hidden on mobile */}
+          <div className="hidden md:flex items-center w-full gap-2 mb-[3px]">
             <div className="flex-1 h-[1.5px] bg-[#1A1A1A]/20" />
             <span className="font-label text-[7px] tracking-[0.5em] uppercase text-black/30">Est. MCMXVI</span>
             <div className="flex-1 h-[1.5px] bg-[#1A1A1A]/20" />
           </div>
           {/* Main masthead title */}
-          <div className="flex items-center gap-3">
-            <span className="text-black/20 text-[11px] leading-none">◆</span>
+          <div className="flex items-center gap-2 md:gap-3">
+            <span className="text-black/20 text-[11px] leading-none hidden md:inline">◆</span>
             <h1
-              className="font-headline font-bold uppercase leading-none text-[#1A1A1A]"
-              style={{ fontSize: 'clamp(1.25rem, 2.2vw, 1.85rem)', letterSpacing: '0.12em', fontFamily: "'Playfair Display', serif" }}
+              className="font-headline font-bold uppercase leading-none text-[#1A1A1A] text-center"
+              style={{ fontSize: 'clamp(0.85rem, 3.5vw, 1.85rem)', letterSpacing: '0.1em', fontFamily: "'Playfair Display', serif" }}
             >
               National Park Service
             </h1>
-            <span className="text-black/20 text-[11px] leading-none">◆</span>
+            <span className="text-black/20 text-[11px] leading-none hidden md:inline">◆</span>
           </div>
           {/* Bottom double rule */}
           <div className="w-full mt-[3px] space-y-[2px]">
             <div className="h-[2px] bg-[#1A1A1A]/25" />
             <div className="h-[0.5px] bg-[#1A1A1A]/15" />
           </div>
-          {/* Tagline */}
-          <p className="font-label text-[7px] tracking-[0.25em] uppercase text-black/30 mt-[3px] whitespace-nowrap">
+          {/* Tagline — hidden on mobile */}
+          <p className="hidden md:block font-label text-[7px] tracking-[0.25em] uppercase text-black/30 mt-[3px] whitespace-nowrap">
             Archive · All 63 Parks · United States of America
           </p>
         </div>
@@ -81,9 +81,14 @@ export default function HomePage() {
       </nav>
 
       {/* Main Content Canvas */}
-      <main className="h-full w-full flex flex-col justify-center items-center px-11 pt-4 pb-20 relative">
+      <main className="flex-1 w-full flex flex-col justify-end md:justify-center items-center md:px-11 pb-24 md:pb-20 pt-2 md:pt-4 relative" style={{ minHeight: 0 }}>
         <div className="flex flex-col items-center justify-center w-full">
-          <div className="w-full max-w-[1380px] h-[580px] flex gap-3 items-stretch panel-container">
+          {/* Scroll hint — mobile only */}
+          <p className="md:hidden font-label text-[8px] tracking-[0.3em] uppercase text-black/30 mb-2 flex items-center gap-2">
+            <span>Swipe to explore</span>
+            <span>→</span>
+          </p>
+          <div className="w-full max-w-[1380px] h-[54vh] md:h-[580px] flex gap-3 items-stretch panel-container">
             
             {/* Panel 1: Yosemite */}
             <div className="panel-item bg-stone-100 cursor-pointer group" onClick={() => goToPark(62)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
