@@ -171,7 +171,7 @@ export default function ParksListPage() {
 
             {/* Arrow */}
             <motion.span
-              className="relative z-10 w-8 text-right font-label text-sm shrink-0"
+              className="relative z-10 w-8 text-center font-label text-sm shrink-0"
               animate={{
                 x: hoveredPark?.id === park.id ? 4 : 0,
                 color: hoveredPark?.id === park.id ? '#c4a46b' : '#1e1c19',

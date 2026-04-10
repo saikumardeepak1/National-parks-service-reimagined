@@ -290,12 +290,13 @@
   backface-visibility: hidden;
 }
 .rotate-y-180 {
-  transform: rotatey(180deg);
+  transform: rotateY(180deg);
 }
 .card-inner {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-.group:hover .card-inner {
-  transform: rotatey(180deg);
+.group:hover .card-inner,
+.group.flipped .card-inner {
+  transform: rotateY(180deg);
 }

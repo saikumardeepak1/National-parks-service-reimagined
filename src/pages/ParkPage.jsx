@@ -22,8 +22,12 @@ function Reveal({ children, delay = 0, className = '' }) {
 
 // ── Wildlife flip card ─────────────────────────────────────────────────────────
 function WildlifeCard({ animal }) {
+  const [flipped, setFlipped] = React.useState(false);
   return (
-    <div className="group perspective-1000 h-96">
+    <div
+      className={`group perspective-1000 h-96 cursor-pointer ${flipped ? 'flipped' : ''}`}
+      onClick={() => setFlipped(f => !f)}
+    >
       <div className="relative w-full h-full card-inner shadow-sm">
         {/* Front */}
         <div className="absolute inset-0 backface-hidden overflow-hidden">
@@ -36,13 +40,11 @@ function WildlifeCard({ animal }) {
           <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
             <p className="font-label text-[9px] tracking-widest uppercase text-white/60 mb-2">{animal.type}</p>
             <h4 className="font-headline text-2xl italic text-white">{animal.name}</h4>
-            <p className="font-label text-[9px] tracking-widest uppercase text-white/30 mt-3">Hover to learn more</p>
+            <p className="font-label text-[9px] tracking-widest uppercase text-white/30 mt-3">Tap to learn more</p>
           </div>
         </div>
         {/* Back */}
-        <div
-          className="absolute inset-0 backface-hidden rotate-y-180 text-white p-10 flex flex-col justify-end overflow-hidden"
-        >
+        <div className="absolute inset-0 backface-hidden rotate-y-180 text-white flex flex-col justify-end overflow-hidden">
           <div
             className="absolute inset-0"
             style={{
@@ -53,7 +55,7 @@ function WildlifeCard({ animal }) {
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-          <div className="relative z-10">
+          <div className="relative z-10 p-8">
             <h4 className="font-headline text-xl mb-3 italic">{animal.tagline}</h4>
             <p className="font-body text-sm opacity-80 leading-relaxed">{animal.desc}</p>
           </div>
