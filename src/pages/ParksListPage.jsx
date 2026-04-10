@@ -95,8 +95,8 @@ export default function ParksListPage() {
           <span className="w-14 font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">No.</span>
           <span className="flex-1 font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">Park</span>
           <span className="hidden md:block w-52 text-center font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">State</span>
-          <span className="hidden lg:block w-24 font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">Est.</span>
-          <span className="hidden lg:block w-28 font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">Visitors</span>
+          <span className="hidden lg:block w-24 text-center font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">Est.</span>
+          <span className="hidden lg:block w-28 text-center font-label text-[9px] tracking-[0.3em] uppercase text-[#3d3832]">Visitors</span>
           <span className="w-8" />
         </div>
 
