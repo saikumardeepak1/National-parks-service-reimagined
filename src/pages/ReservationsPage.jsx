@@ -174,8 +174,8 @@ export default function ReservationsPage() {
         </section>
 
         {/* Demand Overview */}
-        <section className="py-28 md:py-36 px-8">
-          <div className="max-w-3xl mx-auto text-center">
+        <section className="py-28 md:py-36">
+          <div className="max-w-3xl mx-auto px-8 text-center">
             <Reveal className="w-full">
               <p className="font-label text-[10px] tracking-[0.4em] uppercase opacity-40 mb-8 max-w-none">WHY RESERVATIONS MATTER</p>
             </Reveal>
