@@ -38,46 +38,57 @@ export default function HomePage() {
 
       <div className="fixed inset-0 z-[100] grain-overlay" />
 
-      {/* Top Nav */}
-      <nav className="sticky top-0 z-[60] w-full bg-[#FAF8F4]/92 backdrop-blur-md px-8 py-3 flex justify-between items-center border-b border-black/8">
+      {/* Top Nav — stacked on mobile, horizontal on desktop */}
+      <nav className="sticky top-0 z-[60] w-full bg-[#FAF8F4]/92 backdrop-blur-md border-b border-black/8
+        flex flex-col items-center py-2 px-4
+        md:flex-row md:justify-between md:px-8 md:py-3">
 
-        {/* Logo — same treatment as landing page */}
-        <Link to="/home" className="hover:opacity-70 transition-opacity shrink-0">
+        {/* Mobile: logo + title stacked and centered */}
+        <div className="flex flex-col items-center w-full md:hidden">
+          <Link to="/home" className="hover:opacity-70 transition-opacity mb-1">
+            <img alt="NPS Logo" className="w-10 h-auto drop-shadow-lg" src={`${B}assets/nps-logo-official.svg`} />
+          </Link>
+          <h1
+            className="font-headline font-bold uppercase leading-none text-[#1A1A1A] text-center whitespace-nowrap"
+            style={{ fontSize: 'clamp(0.9rem, 4.8vw, 1.4rem)', letterSpacing: '0.12em', fontFamily: "'Playfair Display', serif" }}
+          >
+            National Park Service
+          </h1>
+          <div className="mt-[3px] space-y-[2px] w-full">
+            <div className="h-[1.5px] bg-[#1A1A1A]/20" />
+            <div className="h-[0.5px] bg-[#1A1A1A]/12" />
+          </div>
+        </div>
+
+        {/* Desktop: logo left, masthead center, spacer right */}
+        <Link to="/home" className="hover:opacity-70 transition-opacity shrink-0 hidden md:block">
           <img alt="NPS Logo" className="w-16 h-auto drop-shadow-lg" src={`${B}assets/nps-logo-official.svg`} />
         </Link>
-
-        {/* Newspaper Masthead */}
-        <div className="flex-1 flex flex-col items-center select-none px-2 md:px-4 overflow-hidden">
-          {/* Top rule — hidden on mobile */}
-          <div className="hidden md:flex items-center w-full gap-2 mb-[3px]">
+        <div className="hidden md:flex flex-1 flex-col items-center select-none px-4">
+          <div className="flex items-center w-full gap-2 mb-[3px]">
             <div className="flex-1 h-[1.5px] bg-[#1A1A1A]/20" />
             <span className="font-label text-[7px] tracking-[0.5em] uppercase text-black/30">Est. MCMXVI</span>
             <div className="flex-1 h-[1.5px] bg-[#1A1A1A]/20" />
           </div>
-          {/* Main masthead title */}
-          <div className="flex items-center gap-2 md:gap-3">
-            <span className="text-black/20 text-[11px] leading-none hidden md:inline">◆</span>
+          <div className="flex items-center gap-3">
+            <span className="text-black/20 text-[11px] leading-none">◆</span>
             <h1
-              className="font-headline font-bold uppercase leading-none text-[#1A1A1A] text-center"
-              style={{ fontSize: 'clamp(0.85rem, 3.5vw, 1.85rem)', letterSpacing: '0.1em', fontFamily: "'Playfair Display', serif" }}
+              className="font-headline font-bold uppercase leading-none text-[#1A1A1A]"
+              style={{ fontSize: 'clamp(1.25rem, 2.2vw, 1.85rem)', letterSpacing: '0.12em', fontFamily: "'Playfair Display', serif" }}
             >
               National Park Service
             </h1>
-            <span className="text-black/20 text-[11px] leading-none hidden md:inline">◆</span>
+            <span className="text-black/20 text-[11px] leading-none">◆</span>
           </div>
-          {/* Bottom double rule */}
           <div className="w-full mt-[3px] space-y-[2px]">
             <div className="h-[2px] bg-[#1A1A1A]/25" />
             <div className="h-[0.5px] bg-[#1A1A1A]/15" />
           </div>
-          {/* Tagline — hidden on mobile */}
-          <p className="hidden md:block font-label text-[7px] tracking-[0.25em] uppercase text-black/30 mt-[3px] whitespace-nowrap">
+          <p className="font-label text-[7px] tracking-[0.25em] uppercase text-black/30 mt-[3px] whitespace-nowrap">
             Archive · All 63 Parks · United States of America
           </p>
         </div>
-
-        {/* Spacer to balance logo */}
-        <div className="w-16 shrink-0" />
+        <div className="w-16 shrink-0 hidden md:block" />
       </nav>
 
       {/* Main Content Canvas */}
